@@ -1,10 +1,11 @@
-package com.example.mxrxexample.presentation_layer.view
+package com.example.mxrxexample.presentation_layer.view.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.airbnb.mvrx.BaseMvRxActivity
 import com.example.mxrxexample.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseMvRxActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

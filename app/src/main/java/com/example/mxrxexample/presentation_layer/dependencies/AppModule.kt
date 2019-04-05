@@ -4,6 +4,8 @@ import com.example.mxrxexample.BuildConfig.BASE_URL
 import com.example.mxrxexample.data_layer.api.UserApi
 import com.example.mxrxexample.data_layer.repository_impl.UserRepoImpl
 import com.example.mxrxexample.domain_layer.repository.UserRepository
+import com.example.mxrxexample.domain_layer.use_cases.UserListUseCase
+import com.example.mxrxexample.presentation_layer.utils.AsyncTransformer
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
@@ -35,6 +37,15 @@ object AppModule {
 
         single<UserRepository> {
             UserRepoImpl()
+        }
+    }
+
+
+    val useCases = module {
+
+        single {
+
+            UserListUseCase(AsyncTransformer())
         }
     }
 
