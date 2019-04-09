@@ -44,6 +44,7 @@ class MainFragment : BaseFragment<UserListState, UserListViewModel>() {
                     hideProgressBar()
                     Toast.makeText(context, "API failed to execute", Toast.LENGTH_LONG).show()
                 }
+                else -> hideProgressBar()
 
             }
         }

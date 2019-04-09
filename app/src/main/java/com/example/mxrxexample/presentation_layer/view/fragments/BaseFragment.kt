@@ -1,22 +1,29 @@
 package com.example.mxrxexample.presentation_layer.view.fragments
 
+import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import com.airbnb.mvrx.BaseMvRxFragment
 import com.airbnb.mvrx.BaseMvRxViewModel
+import com.example.mxrxexample.R
 import com.example.mxrxexample.presentation_layer.states.BaseState
-import kotlinx.android.synthetic.main.progress_dailog.*
 
 abstract class BaseFragment<S : BaseState, V : BaseMvRxViewModel<S>> : BaseMvRxFragment() {
 
     protected lateinit var mView: View
+    private lateinit var mProgressBar: ProgressBar
 
-    fun hideProgressBar() = {
-        progressbar.visibility = View.INVISIBLE
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        mProgressBar = mView.findViewById(R.id.progressbar)
     }
 
-    fun showProgressBar() = {
+    fun hideProgressBar() {
+        mProgressBar.visibility = View.GONE
+    }
 
-        progressbar.visibility = View.VISIBLE
+    fun showProgressBar() {
+        mProgressBar.visibility = View.VISIBLE
     }
 
 

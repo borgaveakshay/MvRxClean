@@ -13,8 +13,6 @@ class UserListViewModel(initialState: UserListState) : BaseViewModel<UserListSta
     @SuppressLint("CheckResult")
     fun getUserList(pageNo: Int) {
         this.mUserListUserCase.observable(pageNo).execute { userList ->
-
-
             copy(userList = userList)
         }
     }
