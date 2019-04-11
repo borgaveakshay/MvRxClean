@@ -4,4 +4,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="menu_test">Run test</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="compile_button">Compile</string>
+    <string name="run_button">Run</string>
+
+    <string name="activity_output">Activity.output</string>
+
+    <string name="default_code">msg=\"Hello, Deelang World!\"\nActivity.setOutput(msg)\n\nActivity.blockTest(timesTwo(3+2)) {\n  Activity.log(\"-> In block!\")\n Activity.moveToNextScreen(\"NewActivity\")\n}</string>
+    <!--<string name="default_code">msg=\"Hello, Deelang World!\"\nActivity.blockTest(timesTwo(3+2)) {\n  Activity.aString = msg\n  Activity.setOutput(Activity.aString)\n}\n\n(2+1).times() { Activity.log(\"one time\") }\n</string>-->
+
 </resources>
